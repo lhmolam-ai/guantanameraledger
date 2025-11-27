@@ -64,16 +64,56 @@
     © 2025 Guantanamera Ledger • Contacto: lhmolam@gmail.com • Solo 10 licencias disponibles
   </footer>
 
-  <script>
-    // Cambio rápido de idioma
-    if(location.hash==='#en'){
-      document.querySelector('h1').innerHTML='GUANTANAMERA<br>LEDGER';
-      document.querySelector('.subtitle').innerHTML='The most beautiful private UTXO blockchain ever written<br><span class="flag">Born in Guantánamo, Cuba</span>';
-      document.querySelector('.limited').innerHTML='Only <strong>10 licenses</strong> left at launch price';
-      document.querySelectorAll('.features .card')[0].innerHTML='<h3>Pure Common Lisp</h3><p>≈700 lines of elegant, fully auditable code</p>';
-      document.querySelectorAll('.features .card')[1].innerHTML='<h3>Zero fees · Zero trust</h3><p>Full P2P network included. You own everything</p>';
-      document.querySelectorAll('.features .card')[2].innerHTML='<h3>Cuban soul</h3><p>Written with generator, coffee and the rhythm of Guantanamera</p>';
-    }
-  </script>
+<script>
+// Función para cambiar idioma
+function setLanguage(lang) {
+  if (lang === 'en') {
+    document.querySelector('h1').innerHTML = 'GUANTANAMERA<br>LEDGER';
+    document.querySelector('.subtitle').innerHTML = 'The most beautiful private UTXO blockchain ever written<br><span class="flag">Born in Guantánamo, Cuba</span>';
+    document.querySelector('.limited').innerHTML = 'Only <strong>10 licenses</strong> left at launch price';
+    document.querySelector('.price').innerHTML = '29.997 € <small style="font-size:1rem;opacity:0.7">lifetime license</small>';
+    document.querySelectorAll('.features .card')[0].innerHTML = '<h3>Pure Common Lisp</h3><p>≈700 lines of elegant, fully auditable code</p>';
+    document.querySelectorAll('.features .card')[1].innerHTML = '<h3>Zero fees · Zero trust</h3><p>Full P2P network included. You own everything</p>';
+    document.querySelectorAll('.features .card')[2].innerHTML = '<h3>Cuban soul</h3><p>Written with generator, coffee and the rhythm of Guantanamera</p>';
+    document.querySelector('button.btn-primary').textContent = 'BUY WITH CARD';
+    document.querySelector('button.btn-secondary').textContent = 'PAY WITH CRYPTO';
+    document.querySelector('p[style*="margin-top:4rem"]').innerHTML = '<strong>Yulei Esteban Charlot Poll</strong><br>Cuban engineer from Guantánamo<br><small>Now shipping worldwide from the European Union</small>';
+  } else { // Español por defecto
+    document.querySelector('h1').innerHTML = 'GUANTANAMERA<br>LEDGER';
+    document.querySelector('.subtitle').innerHTML = 'La blockchain privada UTXO más hermosa jamás escrita<br><span class="flag">Nacida en Guantánamo, Cuba</span>';
+    document.querySelector('.limited').innerHTML = 'Solo quedan <strong>10 licencias a precio de lanzamiento</strong>';
+    document.querySelector('.price').innerHTML = '29.997 € <small style="font-size:1rem;opacity:0.7">licencia de por vida</small>';
+    document.querySelectorAll('.features .card')[0].innerHTML = '<h3>Pure Common Lisp</h3><p>≈700 líneas de código elegante y 100 % auditable</p>';
+    document.querySelectorAll('.features .card')[1].innerHTML = '<h3>Zero fees · Zero trust</h3><p>Red P2P completa incluida. Tú lo controlas todo</p>';
+    document.querySelectorAll('.features .card')[2].innerHTML = '<h3>Alma cubana</h3><p>Escrita con generador eléctrico, café y el ritmo de Guantanamera</p>';
+    document.querySelector('button.btn-primary').textContent = 'COMPRAR CON TARJETA';
+    document.querySelector('button.btn-secondary').textContent = 'PAGAR CON CRIPTO';
+    document.querySelector('p[style*="margin-top:4rem"]').innerHTML = '<strong>Yulei Esteban Charlot Poll</strong><br>Ingeniero cubano de Guantánamo<br><small>Ahora enviando al mundo desde la Unión Europea</small>';
+  }
+  location.hash = lang; // Actualiza el hash
+}
+
+// Escucha cambios en el hash (para back/forward del navegador)
+window.addEventListener('hashchange', function() {
+  const lang = location.hash === '#en' ? 'en' : 'es';
+  setLanguage(lang);
+});
+
+// Event listeners para los enlaces ES/EN
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('a[href="#es"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    setLanguage('es');
+  });
+  document.querySelector('a[href="#en"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    setLanguage('en');
+  });
+  
+  // Al cargar la página, chequea el hash inicial
+  const initialLang = location.hash === '#en' ? 'en' : 'es';
+  setLanguage(initialLang);
+});
+</script>
 </body>
 </html>
