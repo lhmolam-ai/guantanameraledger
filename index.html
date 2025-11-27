@@ -15,15 +15,12 @@
     *{margin:0;padding:0;box-sizing:border-box;}
     body{font-family:'Inter',sans-serif;background:var(--background);color:var(--text-primary);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;}
     
-    /* Selector de idioma fijo arriba a la derecha */
     .lang-switch{
       position:fixed;top:20px;right:20px;background:var(--surface);padding:10px 20px;
       border-radius:50px;box-shadow:0 8px 20px rgba(0,0,0,0.15);z-index:1000;
       border:2px solid var(--secondary);font-weight:700;
     }
-    .lang-switch a{
-      color:var(--primary);text-decoration:none;margin:0 12px;transition:var(--transition);
-    }
+    .lang-switch a{color:var(--primary);text-decoration:none;margin:0 12px;transition:var(--transition);}
     .lang-switch a.active{color:var(--secondary);font-weight:900;}
 
     header{
@@ -31,79 +28,36 @@
       color:var(--accent);padding:5rem 2rem;text-align:center;
       box-shadow:var(--shadow);border-bottom:6px solid var(--secondary);
     }
-    h1{
-      font-family:'Playfair Display',serif;font-size:5.5rem;margin:0;color:var(--secondary);
-      text-shadow:4px 4px 15px rgba(0,0,0,0.6);
-    }
+    h1{font-family:'Playfair Display',serif;font-size:5.5rem;margin:0;color:var(--secondary);text-shadow:4px 4px 15px rgba(0,0,0,0.6);}
     .subtitle{font-size:1.7rem;margin:1.5rem 0;opacity:0.95;}
-    .flag{
-      background:var(--secondary);color:var(--primary);padding:0.8rem 2rem;
-      border-radius:50px;display:inline-block;font-weight:900;font-size:1.2rem;margin-top:1rem;
-    }
-    .limited{
-      background:var(--primary);color:var(--accent);padding:1.3rem 3.5rem;
-      border-radius:50px;font-size:1.8rem;font-weight:800;margin:2.5rem 0;
-      display:inline-block;animation:pulse 2.2s infinite;box-shadow:0 10px 30px rgba(139,0,0,0.4);
-    }
+    .flag{background:var(--secondary);color:var(--primary);padding:0.8rem 2rem;border-radius:50px;display:inline-block;font-weight:900;font-size:1.2rem;margin-top:1rem;}
+    .limited{background:var(--primary);color:var(--accent);padding:1.3rem 3.5rem;border-radius:50px;font-size:1.8rem;font-weight:800;margin:2.5rem 0;display:inline-block;animation:pulse 2.2s infinite;box-shadow:0 10px 30px rgba(139,0,0,0.4);}
     @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
-    .price{
-      font-size:6rem;font-weight:900;color:var(--primary);margin:2rem 0;
-      text-shadow:0 4px 10px rgba(0,0,0,0.1);
-    }
+    .price{font-size:6rem;font-weight:900;color:var(--primary);margin:2rem 0;text-shadow:0 4px 10px rgba(0,0,0,0.1);}
 
     .container{max-width:1200px;margin:2rem auto;padding:0 1.5rem;flex:1;}
-    .features{
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin:4rem 0;
-    }
-    .card{
-      background:var(--surface);padding:2.8rem 2rem;border-radius:var(--radius);
-      box-shadow:var(--shadow);transition:var(--transition);border:2px solid var(--border);
-      text-align:center;
-    }
-    .card:hover{
-      transform:translateY(-15px);box-shadow:0 20px 40px rgba(0,0,0,0.18);
-      border-color:var(--secondary);
-    }
-    .card h3{
-      color:var(--primary);font-size:1.8rem;margin-bottom:1rem;
-    }
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;margin:4rem 0;}
+    .card{background:var(--surface);padding:2.8rem 2rem;border-radius:var(--radius);box-shadow:var(--shadow);transition:var(--transition);border:2px solid var(--border);text-align:center;}
+    .card:hover{transform:translateY(-15px);box-shadow:0 20px 40px rgba(0,0,0,0.18);border-color:var(--secondary);}
+    .card h3{color:var(--primary);font-size:1.8rem;margin-bottom:1rem;}
 
     .btn-group{text-align:center;margin:4rem 0;}
-    .btn{
-      padding:1.5rem 4rem;margin:1rem;font-size:1.5rem;border:none;
-      border-radius:50px;cursor:pointer;transition:var(--transition);font-weight:700;
-      min-width:280px;display:inline-block;text-decoration:none;
-    }
-    .btn-primary{
-      background:var(--primary);color:var(--accent);
-    }
-    .btn-primary:hover{
-      background:var(--primary-light);transform:scale(1.05);box-shadow:0 10px 30px rgba(139,0,0,0.3);
-    }
-    .btn-secondary{
-      background:transparent;color:var(--primary);border:4px solid var(--primary);
-    }
-    .btn-secondary:hover{
-      background:var(--primary);color:white;
-    }
+    .btn{padding:1.5rem 4rem;margin:1rem;font-size:1.5rem;border:none;border-radius:50px;cursor:pointer;transition:var(--transition);font-weight:700;min-width:280px;display:inline-block;text-decoration:none;}
+    .btn-primary{background:var(--primary);color:var(--accent);}
+    .btn-primary:hover{background:var(--primary-light);transform:scale(1.05);box-shadow:0 10px 30px rgba(139,0,0,0.3);}
+    .btn-secondary{background:transparent;color:var(--primary);border:4px solid var(--primary);}
+    .btn-secondary:hover{background:var(--primary);color:white;}
 
-    footer{
-      background:var(--primary);color:var(--accent);padding:3rem;text-align:center;margin-top:auto;
-      font-size:1.1rem;
-    }
+    footer{background:var(--primary);color:var(--accent);padding:3rem;text-align:center;margin-top:auto;font-size:1.1rem;}
 
     @media(max-width:768px){
-      h1{font-size:3.5rem;}
-      .price{font-size:4rem;}
-      .limited{font-size:1.4rem;padding:1rem 2rem;}
-      .features{grid-template-columns:1fr;}
-      .btn{min-width:90%;padding:1.3rem 2rem;font-size:1.3rem;}
+      h1{font-size:3.5rem;}.price{font-size:4rem;}.limited{font-size:1.4rem;padding:1rem 2rem;}
+      .features{grid-template-columns:1fr;}.btn{min-width:90%;padding:1.3rem 2rem;font-size:1.3rem;}
     }
   </style>
 </head>
 <body>
 
-  <!-- Selector de idioma -->
   <div class="lang-switch">
     <a href="#es" class="active" data-lang="es">ES</a> | 
     <a href="#en" data-lang="en">EN</a>
@@ -116,23 +70,14 @@
       <span class="flag">Nacida en Guantánamo, Cuba</span>
     </p>
     <div class="limited" id="limited">Solo quedan <strong>10</strong> licencias a precio de lanzamiento</div>
-    <div class="price">29.997 € <small>licencia de por vida</small></div>
+    <div class="price" id="price-block">29.997 € <small id="price-text">licencia de por vida</small></div>
   </header>
 
   <div class="container">
     <div class="features">
-      <div class="card" id="card1">
-        <h3>Pure Common Lisp</h3>
-        <p>≈700 líneas de código elegante, 100 % auditable. Escrito a mano en Guantánamo con generador eléctrico y café cubano.</p>
-      </div>
-      <div class="card" id="card2">
-        <h3>Zero fees · Zero trust</h3>
-        <p>Red P2P completa incluida. Tú controlas todos los nodos. Sin gas. Sin intermediarios. Para siempre.</p>
-      </div>
-      <div class="card" id="card3">
-        <h3>Alma cubana</h3>
-        <p>Escrita al ritmo de Guantanamera, con la misma pasión y resistencia que define a Cuba.</p>
-      </div>
+      <div class="card" id="card1"><h3>Pure Common Lisp</h3><p>≈700 líneas de código elegante, 100 % auditable. Escrito a mano en Guantánamo con generador eléctrico y café cubano.</p></div>
+      <div class="card" id="card2"><h3>Zero fees · Zero trust</h3><p>Red P2P completa incluida. Tú controlas todos los nodos. Sin gas. Sin intermediarios. Para siempre.</p></div>
+      <div class="card" id="card3"><h3>Alma cubana</h3><p>Escrita al ritmo de Guantanamera, con la misma pasión y resistencia que define a Cuba.</p></div>
     </div>
 
     <div style="text-align:center;font-size:1.4rem;margin:3rem 0;">
@@ -140,30 +85,23 @@
     </div>
 
     <div class="btn-group">
-      <a href="mailto:lhmolam@gmail.com?subject=Quiero%20una%20licencia%20Guantanamera%20Ledger" class="btn btn-primary" id="btn-buy">
-        COMPRAR CON TARJETA / TRANSFERENCIA
-      </a>
-      <a href="mailto:lhmolam@gmail.com?subject=Pago%20en%20USDT/USDC%20-%20Guantanamera%20Ledger" class="btn btn-secondary" id="btn-crypto">
-        PAGAR CON CRIPTO (USDT/USDC)
-      </a>
+      <a href="mailto:lhmolam@gmail.com?subject=Quiero%20una%20licencia%20Guantanamera%20Ledger" class="btn btn-primary" id="btn-buy">COMPRAR CON TARJETA / TRANSFERENCIA</a>
+      <a href="mailto:lhmolam@gmail.com?subject=Pago%20en%20USDT/USDC%20-%20Guantanamera%20Ledger" class="btn btn-secondary" id="btn-crypto">PAGAR CON CRIPTO (USDT/USDC)</a>
     </div>
 
     <div style="text-align:center;margin:5rem 0;font-size:1.5rem;" id="author">
-      <strong>Yulei Esteban Charlot Poll</strong><br>
-      Ingeniero cubano de Guantánamo<br>
-      <small>Ahora enviando al mundo desde la Unión Europea</small>
+      <strong>Yulei Esteban Charlot Poll</strong><br>Ingeniero cubano de Guantánamo<br><small>Ahora enviando al mundo desde la Unión Europea</small>
     </div>
   </div>
 
-  <footer id="footer">
-    © 2025 Guantanamera Ledger • Solo 10 licencias disponibles • Contacto: lhmolam@gmail.com
-  </footer>
+  <footer id="footer">© 2025 Guantanamera Ledger • Solo 10 licencias disponibles • Contacto: lhmolam@gmail.com</footer>
 
   <script>
     const translations = {
       es: {
         subtitle: 'La blockchain privada UTXO más hermosa jamás escrita<br><span class="flag">Nacida en Guantánamo, Cuba</span>',
         limited: 'Solo quedan <strong>10</strong> licencias a precio de lanzamiento',
+        price: 'licencia de por vida',
         card1: '<h3>Pure Common Lisp</h3><p>≈700 líneas de código elegante, 100 % auditable. Escrito a mano en Guantánamo con generador eléctrico y café cubano.</p>',
         card2: '<h3>Zero fees · Zero trust</h3><p>Red P2P completa incluida. Tú controlas todos los nodos. Sin gas. Sin intermediarios. Para siempre.</p>',
         card3: '<h3>Alma cubana</h3><p>Escrita al ritmo de Guantanamera, con la misma pasión y resistencia que define a Cuba.</p>',
@@ -175,6 +113,7 @@
       en: {
         subtitle: 'The most beautiful private UTXO blockchain ever written<br><span class="flag">Born in Guantánamo, Cuba</span>',
         limited: 'Only <strong>10</strong> licenses left at launch price',
+        price: 'lifetime license',
         card1: '<h3>Pure Common Lisp</h3><p>≈700 lines of elegant, fully auditable code. Hand-written in Guantánamo with a generator and Cuban coffee.</p>',
         card2: '<h3>Zero fees · Zero trust</h3><p>Full P2P network included. You own every node. No gas. No middlemen. Forever.</p>',
         card3: '<h3>Cuban soul</h3><p>Written to the rhythm of Guantanamera, with the same passion and resilience that defines Cuba.</p>',
@@ -189,6 +128,7 @@
       const t = translations[lang];
       document.getElementById('subtitle').innerHTML = t.subtitle;
       document.getElementById('limited').innerHTML = t.limited;
+      document.getElementById('price-text').textContent = t.price;
       document.getElementById('card1').innerHTML = t.card1;
       document.getElementById('card2').innerHTML = t.card2;
       document.getElementById('card3').innerHTML = t.card3;
@@ -197,7 +137,6 @@
       document.getElementById('author').innerHTML = t.author;
       document.getElementById('footer').innerHTML = t.footer;
 
-      // Actualizar clase active en el selector
       document.querySelectorAll('.lang-switch a').forEach(a => {
         a.classList.toggle('active', a.getAttribute('data-lang') === lang);
       });
@@ -212,8 +151,6 @@
           history.replaceState(null, null, '#' + lang);
         });
       });
-
-      // Cargar idioma inicial
       const hash = location.hash.slice(1) || 'es';
       setLanguage(hash === 'en' ? 'en' : 'es');
     });
