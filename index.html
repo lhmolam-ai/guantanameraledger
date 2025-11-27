@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guantanamera Ledger — Private UTXO Blockchain from Cuba</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--azul:#002868;--rojo:#D21034;--blanco:#fff;--arena:#F4E4BC}
+    body{margin:0;font-family:'Inter',sans-serif;background:linear-gradient(135deg,var(--azul),#001D4A);color:white;min-height:100vh;display:flex;flex-direction:column}
+    .container{max-width:1100px;margin:auto;padding:2rem 1rem;text-align:center;flex:1}
+    h1{font-family:'Playfair Display',serif;font-size:4.8rem;margin:0;color:var(--rojo);text-shadow:3px 3px 12px rgba(0,0,0,0.7)}
+    .subtitle{font-size:1.5rem;opacity:0.95;margin:1.5rem 0}
+    .flag{background:var(--rojo);padding:0.6rem 1.4rem;border-radius:50px;display:inline-block;font-weight:bold}
+    .limited{background:var(--rojo);display:inline-block;padding:1rem 2.5rem;border-radius:50px;font-size:1.4rem;margin:2rem 0;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+    .price{font-size:5rem;font-weight:800;color:var(--rojo);margin:2rem 0}
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin:4rem 0}
+    .card{background:rgba(255,255,255,0.12);backdrop-filter:blur(12px);padding:2rem;border-radius:20px;border:1px solid rgba(255,255,255,0.25)}
+    button{padding:1.2rem 3rem;margin:1rem;font-size:1.4rem;border:none;border-radius:50px;cursor:pointer;transition:.3s;font-weight:600}
+    .btn-primary{background:var(--rojo);color:white}
+    .btn-primary:hover{background:#ff1a4e;transform:scale(1.06)}
+    .btn-secondary{background:transparent;color:white;border:2px solid white}
+    .lang{position:fixed;top:20px;right:20px;background:rgba(0,0,0,0.5);padding:0.5rem 1rem;border-radius:50px;z-index:100}
+    footer{margin-top:4rem;padding:2rem;opacity:0.8;font-size:0.9rem}
+    @media(max-width:768px){h1{font-size:3.2rem}.price{font-size:3.5rem}}
+  </style>
+</head>
+<body>
 
+  <div class="lang">
+    <a href="#es" style="color:white;margin:0 10px;font-weight:bold">ES</a> |
+    <a href="#en" style="color:white;margin:0 10px;">EN</a>
+  </div>
+
+  <div class="container">
+    <br><br>
+    <h1>GUANTANAMERA<br>LEDGER</h1>
+    <p class="subtitle">La blockchain privada UTXO más hermosa jamás escrita<br>
+      <span class="flag">Nacida en Guantánamo, Cuba</span></p>
+
+    <div class="limited">Solo quedan <strong>10 licencias a precio de lanzamiento</strong></div>
+    <div class="price">29.997 € <small style="font-size:1rem;opacity:0.7">licencia de por vida</small></div>
+
+    <div class="features">
+      <div class="card"><h3>Pure Common Lisp</h3><p>≈700 líneas de código elegante y 100 % auditable</p></div>
+      <div class="card"><h3>Zero fees · Zero trust</h3><p>Red P2P completa incluida. Tú lo controlas todo</p></div>
+      <div class="card"><h3>Alma cubana</h3><p>Escrita con generador eléctrico, café y el ritmo de Guantanamera</p></div>
+    </div>
+
+    <p>Incluye: código fuente completo • 12 meses soporte prioritario • imagen Docker • branding personalizado</p>
+
+    <button class="btn-primary" onclick="location.href='mailto:lhmolam@gmail.com?subject=Quiero%20una%20licencia%20Guantanamera%20Ledger'">COMPRAR CON TARJETA</button>
+    <button class="btn-secondary" onclick="location.href='mailto:lhmolam@gmail.com?subject=Pago%20en%20USDT/USDC'">PAGAR CON CRIPTO</button>
+
+    <p style="margin-top:4rem;font-size:1.3rem">
+      <strong>Yulei Esteban Charlot Poll</strong><br>
+      Ingeniero cubano de Guantánamo<br>
+      <small>Ahora enviando al mundo desde la Unión Europea</small>
+    </p>
+  </div>
+
+  <footer>
+    © 2025 Guantanamera Ledger • Contacto: lhmolam@gmail.com • Solo 10 licencias disponibles
+  </footer>
+
+  <script>
+    // Cambio rápido de idioma
+    if(location.hash==='#en'){
+      document.querySelector('h1').innerHTML='GUANTANAMERA<br>LEDGER';
+      document.querySelector('.subtitle').innerHTML='The most beautiful private UTXO blockchain ever written<br><span class="flag">Born in Guantánamo, Cuba</span>';
+      document.querySelector('.limited').innerHTML='Only <strong>10 licenses</strong> left at launch price';
+      document.querySelectorAll('.features .card')[0].innerHTML='<h3>Pure Common Lisp</h3><p>≈700 lines of elegant, fully auditable code</p>';
+      document.querySelectorAll('.features .card')[1].innerHTML='<h3>Zero fees · Zero trust</h3><p>Full P2P network included. You own everything</p>';
+      document.querySelectorAll('.features .card')[2].innerHTML='<h3>Cuban soul</h3><p>Written with generator, coffee and the rhythm of Guantanamera</p>';
+    }
+  </script>
+</body>
+</html>
